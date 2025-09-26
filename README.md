@@ -1,5 +1,5 @@
 ## Overview
-- Scrapes brand pages from `https://medex.com.bd/brands/<page_number>`
+- Scrapes brand pages from `https://medex.com.bd`
 - Extracts product details and the product photo (as Base64)
 - Writes rows to a CSV file `medex_scraper_data.csv`
 - Maintains a checkpoint in `scraper_checkpoint.json` to allow pause & resuming
@@ -28,7 +28,7 @@ Medex_vpn_/
 ```
 
 ## How it works
-- `run.py` imports `scrape_parallel()` and orchestrates the exact same flow as the original script.
+- `run.py` imports `scrape_parallel()` and orchestrates the scraping flow
 - `config.py` configures the `requests` session with retry logic and defines constants:
   - `BASE_URL`
   - `CSV_FILE`
